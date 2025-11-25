@@ -6,7 +6,7 @@
 //   By: weast <weast@student.42berlin.de>          +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2025/08/19 15:56:11 by weast             #+#    #+#             //
-//   Updated: 2025/08/19 16:21:53 by weast            ###   ########.fr       //
+//   Updated: 2025/11/25 16:55:17 by weast            ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -15,16 +15,12 @@
 
 HumanA::HumanA(std::string name, Weapon& weapon) : _name(name), _weapon(weapon)
 {
-	this->_name = name;
-
-	this->_weapon = weapon;
 	std::cout << _name << " spawned." << std::endl;
 }
 HumanA::~HumanA()
 {
 	std::cout << _name << " killed." << std::endl;
 }
-
 
 void	HumanA::attack()
 {
