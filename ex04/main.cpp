@@ -76,7 +76,8 @@ int	main(int ac, char **av)
 	for (int i = 0; i < lineCount; i++)
 		lines[i] = my_replace(lines[i], av[2], av[3]);
 
-	write_contents(lines, lineCount, filename);
+	if (lines != NULL)
+		write_contents(lines, lineCount, filename);
     delete[] lines;
 
 }
