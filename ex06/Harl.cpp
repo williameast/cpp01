@@ -6,7 +6,7 @@
 //   By: weast <weast@student.42berlin.de>          +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2025/08/26 13:56:41 by weast             #+#    #+#             //
-//   Updated: 2025/08/26 15:44:28 by weast            ###   ########.fr       //
+//   Updated: 2025/11/25 16:23:13 by weast            ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -54,17 +54,18 @@ void	Harl::error (void)
 		<< std::endl;
 }
 
-const Harl::FunctionMap Harl::funcs[4] =
+const Harl::FunctionMap Harl::funcs[5] =
 {
 	{0, "ERROR", &Harl::error},
 	{1, "WARNING", &Harl::warning},
 	{2, "INFO", &Harl::info},
 	{3, "DEBUG", &Harl::debug},
+	{4, "OFF", 0},
 };
 
 int	Harl::get_log_level(std::string log_level)
 {
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < 5; i++)
           if (std::strcmp(log_level.c_str(), Harl::funcs[i].name) == 0)
 		  {
             return Harl::funcs[i].level;
@@ -79,6 +80,8 @@ void Harl::complain(std::string log_level)
 
 	switch (level)
 	{
+		case 4:
+			break;
 		case 3:
 			(this->*funcs[3].function)();
 			if (!LOG_LEVELS_ENABLED)

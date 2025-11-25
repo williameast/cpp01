@@ -6,7 +6,7 @@
 //   By: weast <weast@student.42berlin.de>          +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2025/08/26 14:43:59 by weast             #+#    #+#             //
-//   Updated: 2025/08/26 15:46:13 by weast            ###   ########.fr       //
+//   Updated: 2025/11/25 16:22:33 by weast            ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -17,6 +17,8 @@ int	main(void)
 {
 	Harl logger;
 
+	std::cout << "	expecting no message:" << std::endl;
+	logger.complain("OFF");
 	std::cout << "	expecting d, i, e and w message:" << std::endl;
 	logger.complain("DEBUG");
 

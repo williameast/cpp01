@@ -6,7 +6,7 @@
 //   By: weast <weast@student.42berlin.de>          +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2025/08/26 13:52:16 by weast             #+#    #+#             //
-//   Updated: 2025/08/26 15:28:52 by weast            ###   ########.fr       //
+//   Updated: 2025/11/25 16:21:22 by weast            ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -31,7 +31,6 @@ class Harl
 	void warning (void);
 	void error (void);
 
-	// need to grok this function pointer.
 	typedef void (Harl::*LogFunction)(void);
 
 	// a map, where each function is given a name.
@@ -43,7 +42,7 @@ class Harl
 	};
 
 	// create one map for each harl function
-	static const FunctionMap funcs[4];
+	static const FunctionMap funcs[5];
 
 	public:
 

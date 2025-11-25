@@ -66,7 +66,7 @@ int	main(int ac, char **av)
 {
 	if (ac != 4)
 	{
-		std::cerr << "Usage: " << av[0] << "filename" << std::endl;
+		std::cerr << "Usage: " << av[0] << " <filename>" << std::endl;
 		return 1;
 	}
 	int lineCount = 0;
@@ -78,4 +78,5 @@ int	main(int ac, char **av)
 
 	write_contents(lines, lineCount, filename);
     delete[] lines;
+
 }

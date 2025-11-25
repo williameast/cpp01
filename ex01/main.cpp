@@ -5,9 +5,9 @@ int main(void)
 {
 	Zombie *horde;
 
-	horde = zombieHorde(100, "William");
+	horde = zombieHorde(10000, "William");
 
-	announce_all(100, horde);
+	announce_all(10000, horde);
 
 	delete[] horde;
 	return (0);
