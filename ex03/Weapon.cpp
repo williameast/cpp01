@@ -13,7 +13,7 @@ void	Weapon::setType(std::string str)
 
 Weapon::Weapon(std::string type)
 {
-	setType(type);
+  setType(type);
 }
 
 std::string	Weapon::getType(void)
